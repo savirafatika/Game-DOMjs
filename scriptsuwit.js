@@ -1,24 +1,29 @@
+// gu = batu
+// choki = gunting
+// pa = kertas
 function getpilihanComputer() {
    // membangkitkan bilangan random
    const comp = Math.random()
    
-   if( comp < 0.34 ) return 'gajah'
-   if( comp >= 0.34 && comp < 0.67 ) return 'orang'
-   return 'semut'
+   if( comp < 0.34 ) return 'gu'
+   if( comp >= 0.34 && comp < 0.67 ) return 'choki'
+   return 'pa'
 }
-
 // aturan main
+// batu gunting | menang kalah
+// batu kertas | kalah menang
+// gunting kertas | menang kalah
 function getHasil(comp, player) {
-   if( player == comp ) return 'SERI!'
-   if( player == 'gajah' ) return ( comp == 'orang' ) ? 'MENANG!' : 'KALAH!'
-   if( player == 'orang' ) return ( comp == 'gajah' ) ? 'KALAH!' : 'MENANG!'
-   if( player == 'semut' )  return( comp == 'orang' ) ? 'KALAH' : 'MENANG!'
+   if( player == comp ) return 'Equal!'
+   if( player == 'gu' ) return ( comp == 'choki' ) ? 'Win!' : 'Lose!'
+   if( player == 'gu' ) return ( comp == 'pa' ) ? 'Lose!' : 'Win!'
+   if( player == 'choki' )  return( comp == 'pa' ) ? 'Win!' : 'Lose!'
+   if( player == 'pa' )  return( comp == 'gu' ) ? 'Win!' : 'Lose!'
 }
-
 
 function putar() {
    const imgComputer = document.querySelector('.img-computer')
-   const gambar = ['gajah', 'semut', 'orang']
+   const gambar = ['gu', 'pa', 'choki']
    let i = 0
    const waktuMulai = new Date().getTime()
    setInterval(function(){
@@ -33,8 +38,9 @@ function putar() {
    }, 100)
 }
 
-
-const pilihan = document.querySelectorAll('li img')
+const pilihan = document.querySelectorAll('img')
+let win = 1
+let lose = 1
 pilihan.forEach(function (pil) {
    pil.addEventListener('click', function () {
       const pilihanComputer = getpilihanComputer()
@@ -49,10 +55,32 @@ pilihan.forEach(function (pil) {
    
          const info = document.querySelector('.info')
          info.innerHTML = hasil
+
+         // score
+         const skorKomputer = document.querySelector('.skorKomputer')
+			const skorPlayer = document.querySelector('.skorPlayer')
+			
+			if(hasil == 'Win!'){
+				skorPlayer.innerHTML = 'Your Score: ' + win++
+			}
+			if(hasil == 'Lose!'){
+				skorKomputer.innerHTML = 'Computer Score: ' + lose++
+         }
+         
+         // reset
+         const reset = document.getElementById('reset')
+         reset.addEventListener('click', function () {
+            location.reload();
+         })
+
       }, 1000)
    })
 })
 
+const title = document.getElementsByTagName('title')[0]
+title.innerHTML = 'Jan Ken Pon'
+const h1 = document.getElementsByTagName('h1')[0]
+h1.innerHTML = 'Jan Ken Pon'
 
 // const pGajah = document.querySelector('.gajah')
 // pGajah.addEventListener('click', function () {
