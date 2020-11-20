@@ -82,7 +82,7 @@ title.innerHTML = 'Jan Ken Pon'
 const h1 = document.getElementsByTagName('h1')[0]
 h1.innerHTML = 'Jan Ken Pon'
 
-const svr = document.getElementById('svr')
+const svr = document.getElementById('reset')
 const chColor = document.createElement('button')
 const teksTombol = document.createTextNode('Change Background Color')
 chColor.appendChild(teksTombol)

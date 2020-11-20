@@ -7,10 +7,6 @@ body {
    background-image: linear-gradient(-245deg, #3a2542 0%, #421f40 100%);
 }
 
-#svr {
-   border: 2px;
-}
-
 .col-12 {
    text-align: center;
 }
@@ -20,18 +16,14 @@ h1 {
    font-weight: bold;
    padding: 20px;
    margin-top: -40px !important;
+   margin-bottom: -20px !important;
    text-transform: capitalize;
    color: #ffffff;
    text-shadow: 1.5px 1.5px 0 #a87c0d, 0px 1.5px 0 #a87c0d, -1.5px -1.5px 0 #a87c0d, -1.5px -1.5px 0 #a87c0d, -1.5px 1.5px 0 #a87c0d, 1.5px -1.5px 0 #a87c0d, 0.7778174593px 0.7778174593px 0 #D49D14, 1.5556349186px 1.5556349186px 0 #D49D14, 2.3334523779px 2.3334523779px 0 #D49D14, 3.1112698372px 3.1112698372px 0 #D49D14, 3.8890872965px 3.8890872965px 0 #D49D14, 4.6669047558px 4.6669047558px 0 #D49D14, 5.4447222151px 5.4447222151px 0 #D49D14, 6.2225396744px 6.2225396744px 0 #D49D14, 7.0003571337px 7.0003571337px 0 #D49D14, 7.7781745931px 7.7781745931px 0 #D49D14;
 } 
 
-#reset {
-   font-size: 28px;
-   width: 40%;
-}
-
 .col-12 {
-   margin-top: 2%;
+   margin-top: 3%;
 }
 
 .info {
@@ -86,7 +78,7 @@ img {
 
 .footer h6 {
    color: #D49D14 !important;
-   margin-top: 4% !important;
+   margin-top: 7% !important;
 }
 
 @media (min-width: 992px) {
