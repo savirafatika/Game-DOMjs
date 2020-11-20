@@ -82,6 +82,20 @@ title.innerHTML = 'Jan Ken Pon'
 const h1 = document.getElementsByTagName('h1')[0]
 h1.innerHTML = 'Jan Ken Pon'
 
+const svr = document.getElementById('svr')
+const chColor = document.createElement('button')
+const teksTombol = document.createTextNode('Change Background Color')
+chColor.appendChild(teksTombol)
+chColor.setAttribute('type', 'button')
+chColor.setAttribute('class', 'btn btn-sm btn-outline-warning')
+svr.after(chColor)
+chColor.addEventListener('click', function () {
+   const r = Math.round(Math.random() * 75 + 1)
+   const g = Math.round(Math.random() * 0 + 1)
+   const b = Math.round(Math.random() * 130 + 1) 
+   document.body.style.background = 'rgb('+ r +', '+ g +', '+ b +')'
+})
+
 // const pGajah = document.querySelector('.gajah')
 // pGajah.addEventListener('click', function () {
 //    const pilihanComputer = getpilihanComputer()
