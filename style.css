@@ -7,14 +7,13 @@ body {
    background-image: linear-gradient(-245deg, #3a2542 0%, #421f40 100%);
 }
 
-.container {
+.col-12 {
    text-align: center;
 }
 
 h1 {
    font-size: 70px !important;
    font-weight: bold;
-   margin: 3%;
    padding: 20px;
    text-transform: capitalize;
    color: #ffffff;
@@ -23,40 +22,48 @@ h1 {
 
 #reset {
    font-size: 28px;
+   width: 40%;
 }
 
-.col-sm-4 {
-   margin-top: 5%;
-}
-
-.col-sm-4 .btn-warning {
-   font-size: 24px;
-   font-weight: bold;
+.col-12 {
+   margin-top: 2%;
 }
 
 .info {
    width: 100%;
-   height: 90px;
+   height: 60px;
    border: 5px solid rgb(255, 255, 255);
    background-color: #D49D14;
    border-radius: 30px;
-   text-align: center;
    color:white;
    font-size: 48px;
    font-weight: bold;
+   text-transform: uppercase;
+   line-height: 20px;
    text-shadow: 1px 1px 1px rgba(119, 110, 110, 0.3);
 }
 
-.col-sm img {
-   margin-top: 5%;
+.skorKomputer, .skorPlayer {
+   width: 100%;
+   font-size: 18px !important;
+   font-weight: bold !important;
+} 
+
+.col-sm, .area-komputer img {
+   margin-top: 2%;
+   margin-bottom: 2%;
 }
 
 img {
-   width: 150px;
-   height: 150px;
+   width: 160px;
+   height: 160px;
    display: block;
    margin: auto;
    border-radius: 50%;
+}
+
+.img-computer {
+   transform: rotate(180deg);
 }
 
 .gu, .choki, .pa {
@@ -74,13 +81,19 @@ img {
 
 .footer h6 {
    color: #D49D14 !important;
-   margin-top: 6%;
-   position: relative;
+   margin-top: 4% !important;
 }
 
-/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
    .info {
-      margin-top: 50%;
+      width: 65%;
+   }
+   .skorKomputer {
+      width: 20%;
+      margin-left: -360px;
+   }
+   .skorPlayer {
+      width: 20%;
+      margin-left: 360px;
    }
 }

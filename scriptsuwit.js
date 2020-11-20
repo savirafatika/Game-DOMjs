@@ -64,7 +64,7 @@ pilihan.forEach(function (pil) {
 				skorPlayer.innerHTML = 'Your Score: ' + win++
 			}
 			if(hasil == 'Lose!'){
-				skorKomputer.innerHTML = 'Computer Score: ' + lose++
+				skorKomputer.innerHTML = 'Computer: ' + lose++
          }
          
          // reset
